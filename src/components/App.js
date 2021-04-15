@@ -59,7 +59,6 @@ class App extends React.Component {
         // 3. Записать наш новый обьект order в state.
         this.setState({order})
 
-        
     }
 
     render() {
@@ -73,10 +72,10 @@ class App extends React.Component {
                         })}
                     </ul>
 
-                  
+                    
 
                 </div>
-                <Order/>
+                <Order burgers={this.state.burgers} order={this.state.order}/>
                 <MenuAdmin loadSampleBurgers={this.loadSampleBurgers} addBurger={this.addBurger}/>
             </div>
         )

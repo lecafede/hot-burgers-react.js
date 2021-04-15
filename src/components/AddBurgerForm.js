@@ -24,6 +24,8 @@ class AddBurgerForm extends React.Component {
     }
     
 
+    
+        
     render() {
         return (
             <form className="burger-edit" onSubmit={this.createBurger}>
@@ -34,7 +36,7 @@ class AddBurgerForm extends React.Component {
                     <option value="unavailable">Убрать из меню</option>
                 </select>
                 <textarea ref={this.descRef} name="desc" placeholder="Desc"/>
-                <input ref={this.imageRef} name="image" type="text" placeholder="Image" autoComplete="off"/>
+                <input ref={this.imageRef} name="image" type="text" placeholder="Image (URL)" autoComplete="off"/>
                 <button type="submit">+ Добавить в меню</button>
             </form>
         )

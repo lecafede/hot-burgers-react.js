@@ -19,7 +19,6 @@ class Burger extends React.Component {
         const isAvailable = status === 'available'; // Если значение status = available То isAvailable будет равняться true;
         
     
-    
         return (
             <li className="menu-burger">
                 <div className="image-container">
