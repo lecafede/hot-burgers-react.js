@@ -63,6 +63,21 @@ class App extends React.Component {
         this.setState({order})
     }
 
+    deleteBurger = (key) => {
+        const burgers = {...this.state.burgers}
+        burgers[key] = null;
+        this.setState({burgers})
+    }
+
+    
+    deleteFromOrder = (key) => {
+        const order = {...this.state.order};
+        delete order[key] // delete т.к нету синхронизации с FireBase.
+        this.setState({order})
+    }
+
+ 
+
     render() {
         return (
             <div className="burger-paradise"> 
@@ -74,12 +89,13 @@ class App extends React.Component {
                         })}
                     </ul>
                 </div>
-                <Order burgers={this.state.burgers} order={this.state.order}/>
+                <Order burgers={this.state.burgers} order={this.state.order} deleteFromOrder={this.deleteFromOrder}/>
                 <MenuAdmin 
                     loadSampleBurgers={this.loadSampleBurgers} 
                     addBurger={this.addBurger} 
                     burgers={this.state.burgers}
-                    updateBurger={this.updateBurger} />
+                    updateBurger={this.updateBurger}
+                    deleteBurger={this.deleteBurger} />
             </div>
         )
     }
