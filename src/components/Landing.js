@@ -11,7 +11,7 @@ class Landing extends React.Component {
 
     displayList = () => {
         const {display} = this.state;
-        this.setState({display: !display}) // Выводим то что не равно display то есть true;
+        this.setState({display: !display}) 
     }
 
     getTitle = (restaurant) => {
@@ -34,15 +34,12 @@ class Landing extends React.Component {
   
             <div className="restaurant_select">
                 <div className="restaurant_select_top">
-
-                    
                     <div onClick={this.displayList} className="restaurant_select_top-header font-effect-outline">
-                   
+                         
                          {this.state.title ? this.state.title : 'Выбери ресторан'} 
-            
-                    </div>
-                
 
+                    </div>
+        
                     <div className="arrow_picker">
                         <div className="arrow_picker-up"></div>
                         <div className="arrow_picker-down"></div>
@@ -59,10 +56,7 @@ class Landing extends React.Component {
 
 
                 </div>
-                {this.state.title && !this.state.display ? ( <button onClick={this.goToRestaurant}>Перейти в ресторан</button> ) : null}
-               {/* Если у нас есть название и display имеет значение false то мы отображаем кнопку перейти в ресторан
-               В противном случае мы не отображаем ничего */}
-            
+                {this.state.title && !this.state.display ? ( <button onClick={this.goToRestaurant}>Перейти в ресторан</button> ) : null}           
             </div>
        
         )

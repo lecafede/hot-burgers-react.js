@@ -23,9 +23,6 @@ class AddBurgerForm extends React.Component {
         event.currentTarget.reset() // Обновляем поля в форме
     }
     
-
-    
-        
     render() {
         return (
             <form className="burger-edit" onSubmit={this.createBurger}>

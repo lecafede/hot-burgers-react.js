@@ -9,7 +9,7 @@ const Router = props => {
 
         <BrowserRouter>
             <Switch> 
-                {/* Switch проверяет адресную строку браузера и проверяет соответсвие адреса в Route */}
+                {/* Switch - проверяет адресную строку браузера и проверяет соответсвие адреса в Route */}
                 <Route exact path="/" component={Landing} />
                 <Route path='/restaurant/:restaurantId' component={App}/>
                 <Route component={NotFound} />
