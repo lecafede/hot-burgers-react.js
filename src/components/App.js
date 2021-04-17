@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Order from './Order';
 import MenuAdmin from './MenuAdmin';
@@ -9,6 +10,11 @@ import base from '../base';
 
 
 class App extends React.Component {
+
+
+    static propTypes = {
+        match: PropTypes.object
+    }
 
     state = {
         burgers:{},
@@ -59,7 +65,6 @@ class App extends React.Component {
     addToOrder = (key) => {
         const order = {...this.state.order};
         order[key] = order[key] + 1 || 1
-        console.log(order)
         this.setState({order})
     }
 
@@ -82,7 +87,7 @@ class App extends React.Component {
         return (
             <div className="burger-paradise"> 
                 <div className="menu">
-                    <Header title="Very Hot Burgers" amount={10} hot="true"/>
+                    <Header title={"Very Hot Burgers"} amount={10} hot="true"/>
                     <ul className="burgers">
                         {Object.keys(this.state.burgers).map(key => {
                             return <Burger key={key} index={key} details={this.state.burgers[key]} addToOrder={this.addToOrder}/>

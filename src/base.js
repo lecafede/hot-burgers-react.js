@@ -1,5 +1,6 @@
 import Rebase from 're-base';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+require('firebase/database')
 
 const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyBdO2kwT31Jvu0jkD-VhYk17fVJaJrBrbA",
@@ -14,4 +15,5 @@ const firebaseApp = firebase.initializeApp({
 const base = Rebase.createClass(firebaseApp.database());
 
 export {firebaseApp};
+ 
 export default base;
