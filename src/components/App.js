@@ -7,8 +7,6 @@ import sampleBurgers from '../sample-burgers';
 import Burger from './Burger';
 import base from '../base';
 
-
-
 class App extends React.Component {
 
 
