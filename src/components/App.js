@@ -7,7 +7,7 @@ import sampleBurgers from '../sample-burgers';
 import Burger from './Burger';
 import base from '../base';
 import SignIn from './Auth/SignIn';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 class App extends React.Component {
 
